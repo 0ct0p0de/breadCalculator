@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" sizes="64x64" href="img/op-logo-64x64.png">
+    <title>Octopode's Bread Calculator | Home</title>
+    <script src="js/jquery-3.7.1.slim.min.js"></script>
+</head>
+
+<body>
+    <main class="page">
+        <header>
+            <div class="headerWrapper">
+                <section class="welcomeLogo">
+                    <img src="img/op-logo-600x600.png" alt="">
+                </section>
+                <section class="headerTitle">
+                    <h2> </h2>
+                    <h4>Welcome to</h4>
+                    <h1>Octopode's Bread Calculator</h1>
+                </section>
+            </div>
+        </header>
+        <div class="heroDiv">
+
+            <section class="welcomeMessage">
+                <p>
+                    Welcome to Octopode's Bread Calculator — your cozy companion for sourdough baking.
+                    Just enter your starter amount, pick a hydration level, and choose how much dough you want to make.
+                    We'll take care of the math and tell you exactly how much flour, water, and salt you need.
+                </p>
+                <p>
+                    Assumptions:<br>
+                    &emsp; • Starter is 1:1 flour and water <br>
+                    &emsp; • All measurements are in grams  <br>
+                    &emsp; • Salt is 2% of flour weight <br>
+                </p>
+
+            </section>
+
+
+            <div class="formWrapper">
+                <div class="inputWrapper">
+                    <div class="inputItem">
+                        <label for="gStarter" class="formLabels">Starter</label>
+                        <input type="number" name="knowns" id="starterInput" class="formInputs" value="250">
+                        <span class="unit">g</span>
+                    </div>
+                    <div class="inputItem">
+                        <label for="gTotalWeight" class="formLabels">Total Weight</label>
+                        <input type="number" name="knowns" id="weightInput" class="formInputs" value="900">
+                        <span class="unit">g</span>
+                    </div>
+                </div>
+
+                <fieldset class="pHydrationLevel">
+                    <legend>Hydration</legend>
+                    <div class="hydrationField">
+                        <label>
+                            <input type="radio" name="hydration" value="68" />
+                            68%
+                        </label><br />
+
+                        <label>
+                            <input type="radio" name="hydration" value="72" />
+                            72%
+                        </label><br />
+
+                        <label>
+                            <input type="radio" name="hydration" value="75" checked />
+                            75%
+                        </label><br />
+
+                        <label>
+                            <input type="radio" name="hydration" value="78" />
+                            78%
+                        </label><br />
+
+                        <label>
+                            <input type="radio" name="hydration" value="82" />
+                            82%
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <section class="recipe">
+                <div class="recipeItem">
+                    <img src="/img/flour.jpeg">
+                    <p>Flour:&ensp;</p>
+                    <p id="flourAmount">9999</p>
+                </div>
+                <div class="recipeItem">
+                    <img src="/img/water.jpeg">
+                    <p>Water:&ensp;</p>
+                    <p id="waterAmount">9999</p>
+                </div>
+                <div class="recipeItem">
+                    <img src="/img/salt.jpeg">
+                    <p>Salt:&ensp;</p>
+                    <p id="saltAmount">9999</p>
+                </div>                                
+            </section>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <p>&copy; <span id="date">2024 </span><span class="footer-logo">Octopode's Press</span></p>
+        <p>Built by Andrew Ramos</p>
+    </footer>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
