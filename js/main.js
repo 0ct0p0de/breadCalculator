@@ -53,3 +53,13 @@ function calculateSourdough(starter, totalWeight, hydration) {
   document.getElementById('saltAmount').textContent = `${roundedSalt}g`;
 }
 
+//sets date footer
+  const getElement = (selector) => {
+    const element = document.querySelector(selector)
+    if (element) return element
+    throw Error('There is no ${selector} class')
+  }
+
+  const date = getElement('#date');
+  const currentYear = new Date().getFullYear();
+  date.textContent = currentYear;
