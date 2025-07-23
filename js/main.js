@@ -36,19 +36,16 @@ function getGs() {
 }
 
 
-function calculateSourdough(starter, totalWeight, hydration) {
-  const starterFlour = starter / 2;
-  const starterWater = starter / 2;
-  const totalHydration = hydration / 100;
-
-  const flour = (totalWeight - starter - 0.02 * starterFlour) / (1 + totalHydration + 0.02);
-  const water = totalHydration * totalWeight - starterWater;
-  const salt = 0.02 * (flour + starterFlour);
+function calculateSourdough(starter, totalWeight, hydration) {  
+  const totalFlour = totalWeight / hydration;
+  const totalWater = totalWeight - totalFlour;
+  const addedFlour = totalFlour - (starter/2);
+  const addedWater = totalWater - (starter/2);
 
   // Round values
-  const roundedFlour = Math.round(flour);
-  const roundedWater = Math.round(water);
-  const roundedSalt = Math.round(salt * 10) / 10; // salt can stay precise to 0.1g
+  const roundedFlour = Math.round(addedFlour);
+  const roundedWater = Math.round(addedWater);
+  const roundedSalt = Math.round(totalFlour * 0.015); //salt = 1.5% total flour
 
   // Update the DOM
   document.getElementById('flourAmount').textContent = `${roundedFlour}g`;
