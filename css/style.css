@@ -6,32 +6,6 @@
 
 /* fonts */
 
-@font-face {
-  font-family: 'Caveat';
-  src: url('/dll/Caveat-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: 'Chewy';
-  src: url('/dll/Chewy-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Nunito';
-  src: url('/dll/Nunito-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: 'Quicksand';
-  src: url('/dll/Quicksand-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: 'TheGND';
-  src: url('/dll/TheGirlNextDoor-Regular.ttf');
-}
-
-
 html {
   font-size: 100%;
   scrollbar-color: #f4e4c1 #5a3416;
@@ -72,8 +46,8 @@ html {
 
 
   /* fonts  */
-  --headingFont: 'Chewy', serif;
-  --bodyFont: 'Quicksand', sans-serif;
+  --headingFont: 'Harrington', 'Garamond', serif;
+  --bodyFont: 'Rockwell', 'Lucida Sans', sans-serif;
   --smallText: 0.7em;
   /* rest of the vars */
   --backgroundColor: var(--primary-300);
